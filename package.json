@@ -1,0 +1,32 @@
+{
+  "name": "tkn",
+  "version": "0.0.1",
+  "description": "Simple word tokeniser that ignores punctuation. Returning an `Array` of words.",
+  "main": "index.js",
+  "scripts": {
+    "test": "tap ./test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/waltervascarvalho/tkn"
+  },
+  "keywords": [
+    "word",
+    "tokeniser",
+    "tokenizer",
+    "nlp",
+    "token"
+  ],
+  "author": "Walter Carvalho",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/waltervascarvalho/tkn/issues"
+  },
+  "homepage": "https://github.com/waltervascarvalho/tkn",
+  "devDependencies": {
+    "tap": "^0.4.9"
+  },
+  "dependencies": {
+    "stopwords": "0.0.4"
+  }
+}
