@@ -1,7 +1,7 @@
 {
   "name": "tkn",
-  "version": "0.0.1",
-  "description": "Simple word tokeniser that ignores punctuation. Returning an `Array` of words.",
+  "version": "0.0.3",
+  "description": "Simple word tokeniser that ignores punctuation.",
   "main": "index.js",
   "scripts": {
     "test": "tap ./test"
