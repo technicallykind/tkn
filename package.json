@@ -1,6 +1,6 @@
 {
   "name": "tkn",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Simple word tokeniser that ignores punctuation.",
   "main": "index.js",
   "scripts": {
