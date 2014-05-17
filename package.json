@@ -27,6 +27,6 @@
     "tap": "^0.4.9"
   },
   "dependencies": {
-    "stopwords": "0.0.4"
+    "stopwords": "*"
   }
 }
