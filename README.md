@@ -3,6 +3,8 @@ tkn
 
 [![Build Status](https://travis-ci.org/waltervascarvalho/tkn.svg?branch=master)](https://travis-ci.org/waltervascarvalho/tkn)
 
+[![Gitter chat](https://badges.gitter.im/waltervascarvalho/tkn.png)](https://gitter.im/waltervascarvalho/tkn)
+
 Simple word tokeniser that ignores punctuation. Returning an `Array` of words.
 
 ### Usage
