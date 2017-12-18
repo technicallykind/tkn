@@ -96,8 +96,8 @@ slide@*:
   resolved "https://registry.yarnpkg.com/slide/-/slide-1.1.6.tgz#56eb027d65b4d2dce6cb2e2d32c4d4afc9e1d707"
 
 stopwords@*:
-  version "0.0.5"
-  resolved "https://registry.yarnpkg.com/stopwords/-/stopwords-0.0.5.tgz#59ad9dceb96ea0fa27459e1cefe0ee0e6ddfd514"
+  version "0.0.9"
+  resolved "https://registry.yarnpkg.com/stopwords/-/stopwords-0.0.9.tgz#d2ceb30c778b3b12896d476a0ca5e9946141b5e3"
 
 tap@^0.4.9:
   version "0.4.13"
