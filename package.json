@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/waltervascarvalho/tkn",
   "devDependencies": {
-    "tap": "^0.4.9"
+    "tap": "^15.0.3"
   },
   "dependencies": {
     "stopwords": "*"
