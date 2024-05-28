@@ -19,3 +19,4 @@ var tkn = require('tkn');
 var str = "you're simply a test, a mere test";
 var tokenised = tkn.tokenise(str);
 >> ['simply', 'test', 'mere', 'test']
+
