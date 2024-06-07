@@ -27,12 +27,13 @@ profile.setCoin(0xa7bc86aa); // degen
 profile.chash = true;
 
 // Updated lookup function to be environment-agnostic
-async function fetch(name) {
+async function lookup(prefix) {
     try {
-        const ensName = ethers.namehash(`${name}.tkn.eth`);
-        const calls = profile.makeCallsForName(ensName);
+        if (prefix && !prefix.endsWith('.')) prefix += '.';
+        const name = `${prefix}tkn.eth`;
+        const calls = profile.makeCallsForName(name);
         const multi = iface.encodeFunctionData('multicall', [calls]);
-        const res = await resolver.resolve(ethers.namehash(ensName), multi, { enableCcipRead: true });
+        const res = await resolver.resolve(ethers.dnsEncode(name, 255), multi, { enableCcipRead: true });
         const [answers] = iface.decodeFunctionResult('multicall', res);
         const record = new Record();
         record.parseCalls(calls, answers);
@@ -44,7 +45,7 @@ async function fetch(name) {
 }
 
 const tkn = {
-    fetch,
+    lookup,
     // other utilities
 };
 

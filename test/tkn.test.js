@@ -1,11 +1,10 @@
 import { tkn } from '../index';  // Adjust the path as necessary
 
-describe('tkn.fetch', () => {
+describe('tkn.lookup', () => {
   it('should fetch data for "frame"', async () => {
-    const result = await tkn.fetch('eth');
+    const result = await tkn.lookup('eth');
     expect(result).toBeDefined();
-    expect(result).toHaveProperty('name');
+    expect(result.name).toEqual('Ethereum');
     console.log(result);
-    expect(result.name).toEqual('frame.eth');
   });
 });
