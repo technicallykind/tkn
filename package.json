@@ -1,32 +1,35 @@
 {
   "name": "tkn",
-  "version": "0.0.5",
-  "description": "Simple word tokeniser that ignores punctuation.",
+  "version": "0.0.1",
+  "description": "The Token Name Service NPM package",
+  "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "tap ./test"
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+  },
+  "jest": {
+    "transform": {}
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/waltervascarvalho/tkn"
+    "url": "git+ssh://git@github.com/TickerDao/tkn.git"
   },
   "keywords": [
-    "word",
-    "tokeniser",
-    "tokenizer",
-    "nlp",
-    "token"
+    "tkn",
+    "tns",
+    "tokens"
   ],
-  "author": "Walter Carvalho",
-  "license": "MIT",
+  "author": "Kindnesss.eth",
+  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/waltervascarvalho/tkn/issues"
+    "url": "https://github.com/TickerDao/tkn/issues"
   },
-  "homepage": "https://github.com/waltervascarvalho/tkn",
-  "devDependencies": {
-    "tap": "^0.4.9"
-  },
+  "homepage": "https://github.com/TickerDao/tkn#readme",
   "dependencies": {
-    "stopwords": "*"
+    "@resolverworks/enson": "^0.0.12",
+    "ethers": "^6.13.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
   }
 }
