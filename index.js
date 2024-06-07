@@ -1,12 +1,18 @@
 import { ethers } from 'ethers';
 import { Record, Profile } from '@resolverworks/enson';
 
-// Setup Ethereum provider and contract
-const provider = new ethers.CloudflareProvider();
-// const provider = new ethers.providers.AlchemyProvider(); // Defaults to Ethereum mainnet
+const rpcs = [
+    // 'https://eth-mainnet.g.alchemy.com/v2/9T5n0ljpi0uGhLhyGnQNQ0ZJ8aU9awlQ'
+    'https://eth-mainnet.rpc.grove.city/v1/298e23fd'
+];
+
+const providers = rpcs.map(url => new ethers.JsonRpcProvider(url));
+
+const fallbackProvider = new ethers.FallbackProvider(providers);
+
 const resolver = new ethers.Contract('0xe121A6e3a50008EFE9C617214320c2f9fF903411', [
     'function resolve(bytes name, bytes call) external view returns (bytes memory)',
-], provider);
+], fallbackProvider);
 
 const iface = new ethers.Interface([
     'function multicall(bytes[] memory calls) returns (bytes[] memory)'
