@@ -1,5 +1,7 @@
 ## The Token Name Service
 
+The easiest, most unruggable, and comprehensive token data service.
+
 **Getting started:**  
 
 Run `npm i tkn` from the command line   
