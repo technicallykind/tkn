@@ -1,6 +1,6 @@
 ## The Token Name Service
 
-Getting started:  
+**Getting started:**  
 
 Run `npm i tkn` from the command line   
 
@@ -11,14 +11,14 @@ const data = await tkn.fetch('eth');
 ```
 
 ---
-Developing:   
+**Developing:**   
 `npm i`  
 `npm test`
 
 ---
-Publishing:   
+**Publishing:**   
 Update version in `package.json`   
-`git commit -m "message"`   
+`git commit -m "commit message"`   
 `npm login`   
 `git tag <v0.1.0 (version label)> <1f2d3a4 (commit sha)>`   
 `git push origin --tags`   
