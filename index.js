@@ -1,10 +1,13 @@
 import { ethers } from 'ethers';
 import { Record, Profile } from '@resolverworks/enson';
+import { mock_list } from './mock_data';
 
 const rpcs = [
     // 'https://eth-mainnet.g.alchemy.com/v2/9T5n0ljpi0uGhLhyGnQNQ0ZJ8aU9awlQ'
     'https://eth-mainnet.rpc.grove.city/v1/298e23fd'
 ];
+
+let isMockMode = false;
 
 const providers = rpcs.map(url => new ethers.JsonRpcProvider(url));
 
@@ -32,6 +35,10 @@ profile.setCoin(0x7f55c959); // sepolia
 profile.setCoin(0xa7bc86aa); // degen
 profile.chash = true;
 
+function setMockupMode(enabled) {
+    isMockMode = enabled;
+}
+
 // Updated lookup function to be environment-agnostic
 async function lookup(prefix) {
     try {
@@ -50,8 +57,21 @@ async function lookup(prefix) {
     }
 }
 
+// Updated list function to support mock mode
+function list(prefix) {
+    if (isMockMode) {
+        return mock_list[prefix]; // This is the original implementation
+    }
+
+    // Throw error for production list data
+    throw new Error('Production list data not yet configured');
+}
+
+
 const tkn = {
     lookup,
+    list,
+    setMockupMode,
     // other utilities
 };
 
